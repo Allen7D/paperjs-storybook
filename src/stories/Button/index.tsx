@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.less';
+import './index.less';
 
 interface ButtonProps {
   /**

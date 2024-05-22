@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Header } from './Header';
-import './page.less';
+import { Header } from '../Header';
+import './index.less';
 
 type User = {
   name: string;
