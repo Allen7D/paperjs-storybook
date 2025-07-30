@@ -1,5 +1,5 @@
 {
-  "name": "storybook",
+  "name": "paperjs-storybook",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "paper": "^0.12.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -20,11 +21,11 @@
     "@storybook/addon-interactions": "7.6.19",
     "@storybook/addon-links": "7.6.19",
     "@storybook/addon-onboarding": "^1.0.11",
-    "@storybook/addon-styling-webpack": "^1.0.0",
     "@storybook/blocks": "7.6.19",
     "@storybook/react": "7.6.19",
     "@storybook/react-vite": "7.6.19",
     "@storybook/test": "7.6.19",
+    "@types/paper": "^0.12.3",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
