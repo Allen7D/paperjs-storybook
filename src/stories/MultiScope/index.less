@@ -1,0 +1,176 @@
+.multi-scope-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  overflow: hidden;
+
+  .scope-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    h3 {
+      margin: 0 0 15px 0;
+      color: #2c3e50;
+      font-size: 1.4em;
+      font-weight: 600;
+      text-align: center;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, #3498db, #2ecc71);
+        border-radius: 2px;
+      }
+    }
+
+    .paper-canvas {
+      border: 2px solid #ecf0f1;
+      border-radius: 6px;
+      background: #ffffff;
+      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: border-color 0.3s ease;
+
+      &:hover {
+        border-color: #3498db;
+      }
+    }
+
+    .scope-description {
+      margin: 15px 0 0 0;
+      color: #7f8c8d;
+      font-size: 0.9em;
+      line-height: 1.5;
+      text-align: center;
+      max-width: 600px;
+      padding: 10px 15px;
+      background: #f8f9fa;
+      border-left: 4px solid #3498db;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 768px) {
+    padding: 15px;
+    gap: 20px;
+
+    .scope-section {
+      padding: 15px;
+
+      h3 {
+        font-size: 1.2em;
+      }
+
+      .paper-canvas {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .scope-description {
+        font-size: 0.85em;
+        padding: 8px 12px;
+      }
+    }
+  }
+
+  // 深色主题支持
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+
+    .scope-section {
+      background: #34495e;
+      color: #ecf0f1;
+
+      h3 {
+        color: #ecf0f1;
+
+        &::after {
+          background: linear-gradient(90deg, #3498db, #2ecc71);
+        }
+      }
+
+      .paper-canvas {
+        border-color: #4a5568;
+        background: #2d3748;
+
+        &:hover {
+          border-color: #3498db;
+        }
+      }
+
+      .scope-description {
+        background: #2d3748;
+        color: #a0aec0;
+        border-left-color: #3498db;
+      }
+    }
+  }
+
+  // 打印样式
+  @media print {
+    background: white;
+    box-shadow: none;
+    padding: 0;
+
+    .scope-section {
+      background: white;
+      box-shadow: none;
+      page-break-inside: avoid;
+
+      .paper-canvas {
+        border: 1px solid #000;
+        box-shadow: none;
+      }
+
+      .scope-description {
+        background: #f5f5f5;
+        color: #333;
+      }
+    }
+  }
+}
+
+// 加载动画
+.multi-scope-container.loading {
+  .scope-section {
+    opacity: 0.7;
+    
+    .paper-canvas {
+      filter: blur(1px);
+    }
+  }
+}
+
+// 错误状态
+.multi-scope-container.error {
+  .scope-section {
+    border: 2px solid #e74c3c;
+    
+    .paper-canvas {
+      opacity: 0.5;
+      filter: grayscale(1);
+    }
+  }
+}
