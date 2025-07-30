@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 
 import { Button } from './index';
 
@@ -24,6 +25,7 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
+    onClick: fn(),
     primary: true,
     label: 'Button',
   },
@@ -31,12 +33,14 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
+    onClick: fn(),
     label: 'Button',
   },
 };
 
 export const Large: Story = {
   args: {
+    onClick: fn(),
     size: 'large',
     label: 'Button',
   },
@@ -44,6 +48,7 @@ export const Large: Story = {
 
 export const Small: Story = {
   args: {
+    onClick: fn(),
     size: 'small',
     label: 'Button',
   },

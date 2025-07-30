@@ -17,14 +17,15 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "7.6.19",
-    "@storybook/addon-interactions": "7.6.19",
-    "@storybook/addon-links": "7.6.19",
-    "@storybook/addon-onboarding": "^1.0.11",
-    "@storybook/blocks": "7.6.19",
-    "@storybook/react": "7.6.19",
-    "@storybook/react-vite": "7.6.19",
-    "@storybook/test": "7.6.19",
+    "@chromatic-com/storybook": "3",
+    "@storybook/addon-essentials": "8.6.14",
+    "@storybook/addon-interactions": "8.6.14",
+    "@storybook/addon-links": "8.6.14",
+    "@storybook/addon-onboarding": "8.6.14",
+    "@storybook/blocks": "8.6.14",
+    "@storybook/react": "8.6.14",
+    "@storybook/react-vite": "8.6.14",
+    "@storybook/test": "8.6.14",
     "@types/paper": "^0.12.3",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
@@ -36,7 +37,7 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "eslint-plugin-storybook": "^0.8.0",
     "less": "^4.2.0",
-    "storybook": "7.6.19",
+    "storybook": "8.6.14",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
