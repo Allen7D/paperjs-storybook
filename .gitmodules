@@ -1,0 +1,3 @@
+[submodule "libs/paper.js"]
+	path = libs/paper.js
+	url = git@github.com:Allen7D/paper.js.git
